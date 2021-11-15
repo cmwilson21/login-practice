@@ -2,7 +2,7 @@ export const signup = (details, history) => {
   return async (dispatch) => {
     dispatch({ type: "REQUESTING" });
 
-    const resp = await fetch(baseURL + '/api/v1/signup', {
+    const resp = await fetch('http://127.0.0.1:3005/signup', {
       method: "POST",
       headers: {
         "Accept": "application/json",
@@ -30,7 +30,7 @@ export const signup = (details, history) => {
 export const login = (details, history) => {
   return async dispatch => {
     dispatch({ type: "REQUESTING" });
-    const resp = await fetch(baseURL + '/api/v1/login', {
+    const resp = await fetch('http://127.0.0.1:3005/login', {
       method: "POST",
       headers: {
         "Accept": "application/json",
@@ -57,7 +57,7 @@ export const login = (details, history) => {
 export const getCurrentUser = () => {
   return async dispatch => {
     dispatch({ type: "REQUESTING" })
-    const resp = await fetch(baseURL + '/api/v1/get-current-user', {
+    const resp = await fetch('http://127.0.0.1:3005/get-current-user', {
       headers: {
         "Accept": "application/json",
         "Content-Type": "application/json",
