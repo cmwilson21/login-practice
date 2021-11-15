@@ -7,11 +7,11 @@ import React, {useEffect} from 'react';
 import {getCurrentUser} from './actions/sessionsActions';
 
 function App() {
-  // const dispatch = useDispatch();
+  const dispatch = useDispatch();
 
-  // useEffect(() => {
-  //   dispatch(getCurrentUser())
-  // }, [dispatch])
+  useEffect(() => {
+    dispatch(getCurrentUser())
+  }, [dispatch])
 
 
   return (
